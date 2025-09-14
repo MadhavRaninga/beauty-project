@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .best-selling {
+        /* height: 500px; */
+        width: 100%;
+        /* background-color: red; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /* border: 2px solid black; */
+        padding-block: 2%;
+        padding-inline: 5%;
+        gap: 70px;
+        position: relative;
+    }
+
+    .sell-1 {
+        height: 200px;
+        width: 100%;
+        /* background-color: blanchedalmond; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sell-2 {
+        height: auto;
+        width: 100%;
+        background-color: #E0C1D9;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 15px;
+        letter-spacing: -1px;
+        color: #834256;
+        padding-inline: 8%;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding-block: 20px;
+    }
+
+    .sell-1 img {
+        width: 102px;
+    }
+
+    .sell-1 h2 {
+        color: #864058;
+    }
+
+    .sell-1 h1 {
+        font-size: 55px;
+        font-weight: 400;
+        letter-spacing: 2px;
+    }
+
+    .s1 {
+        background-color: #4B123C7D;
+        padding-inline: 30px;
+        padding-block: 8px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .s1 h1 {
+        font-weight: 400;
+        color: white;
+        font-size: 25px;
+    }
+
+    .s2 {
+        /* background-color: #4B123C7D; */
+        padding-inline: 35px;
+        padding-block: 8px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        border: 2px solid #4B123C7D;
+    }
+
+    .s2 h1 {
+        font-weight: 400;
+        font-size: 23px;
+    }
+
+    .s3 {
+        /* background-color: #4B123C7D; */
+        padding-inline: 35px;
+        padding-block: 8px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        border: 2px solid #4B123C7D;
+    }
+
+    .s3 h1 {
+        font-weight: 400;
+        font-size: 23px;
+    }
+
+    .s4 {
+        /* background-color: #4B123C7D; */
+        padding-inline: 35px;
+        padding-block: 8px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        border: 2px solid #4B123C7D;
+    }
+
+    .s4 h1 {
+        font-weight: 400;
+        font-size: 23px;
+    }
+
+    .s5 {
+        /* background-color: #4B123C7D; */
+        padding-inline: 35px;
+        padding-block: 8px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        border: 2px solid #4B123C7D;
+    }
+
+    .s5 h1 {
+        font-weight: 400;
+        font-size: 23px;
+    }
+
+    .leaves {
+        position: absolute;
+        top: 10px;
+    }
+
+    .leaves img {
+        width: 80%;
+    }
+    
+    @media (max-width:1200px) {
+        .leaves img{
+            width: 350px;
+        }
+    }
+    @media (max-width:768px) {
+         .leaves img{
+            width: 200px;
+        }
+        .sell-1 h1{
+            font-size: 45px;
+        }
+        .leaves img{
+            position: relative;
+            top: 150px;
+            right: 50px;
+        }
+    }
+    .product-section {
+    /* background-color: #864058; */
+      /* padding: 40px 20px; */
+      /* max-width: 1200px; */
+      margin: auto;
+      display: flex;
+      height: auto;
+      width: 100%;
+      justify-content: space-evenly;
+      /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+      /* gap: 25px; */
+      padding-inline: 15%;
+    }
+
+    .product-card {
+        width: 400px;
+      background: #fff;
+      border: 1px solid #dbd3d3;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+      transition: all 0.3s ease;
+      padding-block: 70px;
+    }
+    
+    .product-card h3{
+        color: #7a4a64;
+        font-size: 30px;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    /* Discount Badge */
+    .badge {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      background: #7a4a64;
+      color: #fff;
+      padding: 15px 30px;
+      font-size: 18px;
+    }
+
+    .product-card img {
+      object-fit: contain;
+      margin-bottom: 15px;
+    }
+
+    .icons {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .icons button {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 1px solid rgb(225, 217, 217);
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .icons button:hover {
+      background: #f8d7e0;
+      color: #b23a65;
+    }
+
+    .product-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 5px;
+      min-height: 40px;
+    }
+
+    .stars {
+      color: #c47b8a;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-size: 16px;
+      font-weight: 600;
+      color: #7a4a64;
+    }
+
+    .price del {
+      color: #aaa;
+      font-size: 14px;
+      margin-left: 5px;
+    }
+
+ 
+    @media(max-width:768px) {
+      .product-card img {
+        height: 160px;
+      }
+    }
+</style>
+
+<body>
+    <div class="best-selling">
+        <div class="sell-1"> <img src="./assets/logo.png" alt="">
+            <h2>Best Selling</h2>
+            <h1>Latest Products</h1>
+        </div>
+        <div class="sell-2">
+            <div class="s1">
+                <h1>ALL</h1>
+            </div>
+            <div class="s2">
+                <h1>FOUNDATION</h1>
+            </div>
+            <div class="s3">
+                <h1>LIPSTICK</h1>
+            </div>
+            <div class="s4">
+                <h1>EYE SHADOW</h1>
+            </div>
+            <div class="s5">
+                <h1>HIGHLIGHTER</h1>
+            </div>
+        </div>
+    </div>
+    <div class="leaves"> <img src="./assets/leaves.png" alt=""> </div>
+
+    <section class="product-section">
+    <!-- Product 1 -->
+    <div class="product-card">
+      <span class="badge">-15%</span>
+      <div class="icons">
+        <button>♡</button>
+        <button>👁</button>
+        <button>🛒</button>
+      </div>
+      <img src="./assets/bottle-1.png" alt="Perfume">
+      <hr>
+      <hr>
+      <h3>Yves Saint Laurent Libre Eau de Toilette</h3>
+      <div class="stars">★★★★★</div>
+      <div class="price">$90.00 <del>$110.00</del></div>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-card">
+      <div class="icons">
+        <button>♡</button>
+        <button>👁</button>
+        <button>🛒</button>
+      </div>
+      <img src="./assets/bottle-2.png" alt="Foundation">
+      <hr>
+      <hr>
+      <h3 class="product-title">Wear Weightless Liquid Foundation Broad</h3>
+      <div class="stars">★★★★★</div>
+      <div class="price">$70.00</div>
+    </div>
+
+   
+  </section>
+  <br><br><br>
+    <section class="product-section">
+    <!-- Product 1 -->
+    <div class="product-card">
+      <span class="badge">-15%</span>
+      <div class="icons">
+        <button>♡</button>
+        <button>👁</button>
+        <button>🛒</button>
+      </div>
+      <img src="./assets/img-4.png" alt="Perfume">
+      <hr>
+      <hr>
+      <h3>Yves Saint Laurent Libre Eau de Toilette</h3>
+      <div class="stars">★★★★★</div>
+      <div class="price">$90.00 <del>$110.00</del></div>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-card">
+      <div class="icons">
+        <button>♡</button>
+        <button>👁</button>
+        <button>🛒</button>
+      </div>
+      <img src="./assets/img-3.png" alt="Foundation">
+      <hr>
+      <hr>
+      <h3 class="product-title">Wear Weightless Liquid Foundation Broad</h3>
+      <div class="stars">★★★★★</div>
+      <div class="price">$70.00</div>
+    </div>
+
+   
+  </section>
+  <br><br><br>
+
+    <section class="product-section">
+    <!-- Product 1 -->
+    <div class="product-card">
+      <span class="badge">-15%</span>
+      <div class="icons">
+        <button>♡</button>
+        <button>👁</button>
+        <button>🛒</button>
+      </div>
+      <img src="./assets/bottle-1.png" alt="Perfume">
+      <hr>
+      <hr>
+      <h3>Yves Saint Laurent Libre Eau de Toilette</h3>
+      <div class="stars">★★★★★</div>
+      <div class="price">$90.00 <del>$110.00</del></div>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-card">
+      <div class="icons">
+        <button>♡</button>
+        <button>👁</button>
+        <button>🛒</button>
+      </div>
+      <img src="./assets/bottle-2.png" alt="Foundation">
+      <hr>
+      <hr>
+      <h3 class="product-title">Wear Weightless Liquid Foundation Broad</h3>
+      <div class="stars">★★★★★</div>
+      <div class="price">$70.00</div>
+    </div>
+
+   
+  </section>
+
+   <br><br><br>
+    <section class="product-section">
+    <!-- Product 1 -->
+    <div class="product-card">
+      <span class="badge">-15%</span>
+      <div class="icons">
+        <button>♡</button>
+        <button>👁</button>
+        <button>🛒</button>
+      </div>
+      <img src="./assets/img-4.png" alt="Perfume">
+      <hr>
+      <hr>
+      <h3>Yves Saint Laurent Libre Eau de Toilette</h3>
+      <div class="stars">★★★★★</div>
+      <div class="price">$90.00 <del>$110.00</del></div>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-card">
+      <div class="icons">
+        <button>♡</button>
+        <button>👁</button>
+        <button>🛒</button>
+      </div>
+      <img src="./assets/img-3.png" alt="Foundation">
+      <hr>
+      <hr>
+      <h3 class="product-title">Wear Weightless Liquid Foundation Broad</h3>
+      <div class="stars">★★★★★</div>
+      <div class="price">$70.00</div>
+    </div>
+
+   
+  </section>
+
+    <div class="footer">
+      <div class="foot-1">
+          <div class="f1">
+              <img src="./assets/logo.png" alt="">
+          </div>
+          <div class="f2">
+              <p>Follow us</p>
+              <i class="ri-facebook-circle-fill"></i>
+              <i class="ri-pinterest-fill"></i>
+              <i class="ri-whatsapp-fill"></i>
+              <i class="ri-instagram-fill"></i>
+          </div>
+      </div>
+
+      <div class="foot-2">
+          <div class="explore">
+          <div class="ex-1">
+            <h1>Explore</h1>
+            <p>Home</p>
+            <p>Blog</p>
+            <p>Contact us</p>
+            <p>Services</p>
+          </div>
+          <div class="ex-1">
+            <h1>About Us</h1>
+            <p>123456789</p>
+            <p>abc@gmail.com</p>
+            <p>ghvhtbtjbjhbjhbjhb</p>
+            <p>somnath,veraval</p>
+          </div>
+          </div>
+          <div class="news"> 
+            <div class="n1">
+              <h1>Recent News</h1>
+            </div>
+            <div class="n2">
+              <div class="anti">
+                <div class="june-1">
+                  <img src="./assets/girl (2).png" alt="">
+                </div>
+                <div class="june-2">
+                  <p>June 14,2024</p>
+                  <h6>Anti-Aging Cream</h6>
+                </div>
+              </div>
+              <div class="anti">
+                <div class="june-1">
+                  <img src="./assets/girl-3.png" alt="">
+                </div>
+                <div class="june-2">
+                  <p>June 14,2024</p>
+                  <h6>Anti-Aging Cream</h6>
+                </div>
+              </div>
+            </div>
+            </div>
+            </div>
+            <div class="last">
+              <p>© 2024 House. All rights reserved</p>
+            </div>
+          </div>
+          <div class="foot-leaves">
+            <img src="./assets/leaves-2.png" alt="">
+          </div>
+
+      
+            
+</body>
+
+</html>
