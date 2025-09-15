@@ -956,6 +956,14 @@
     .subscribe-image {
         min-width: 100%;
     }
+    .golden-ring{
+        height: 300px;
+        width: 300px;
+    }
+    .header-img-circle {
+        /* width: ; */
+        height: 350px;
+    }
 }
 @media (max-width: 380px) {
     .header-img-circle {
