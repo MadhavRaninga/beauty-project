@@ -575,6 +575,8 @@
     @media (max-width: 1280px) {
       .txt { font-size: 70px; line-height: 75px; padding-left: 20px; }
       .header-dtl button { margin: 40px 0px 0px 20px; }
+      .navbar { padding-right: 0%; }
+      .links, .menu-btn { padding-right: 3vw; }
     }
     @media (max-width: 1160px) {
       .header-img-circle { height: 85vh; width: 52vw; }
@@ -620,7 +622,7 @@
     }
     @media (max-width: 530px) {
       .header-img { height: auto; padding-bottom: 15px; }
-      .header-img-circle { height: 65vh; }
+      .header-img-circle { height: 350px; }
       .circle-box { width: 100%; }
       .txt { font-size: 40px; line-height: 48px; }
       .ring-circle { width: 94%; }
@@ -634,7 +636,7 @@
       .product-img img:nth-child(5) { width: 80px; height: 160px; top: 120px; right: 67px; }
     }
     @media (max-width: 480px) {
-      .golden-ring { display: flex; flex-direction: column; align-items: center; width: 90%; height: 90%; }
+      .golden-ring { display: flex; flex-direction: column; align-items: center; width: 320px; height: 320px; }
       .product-img img:nth-child(2) { width: 90px; height: 210px; top: 70px; }
       .product-img img:nth-child(3) { width: 50px; height: 120px; top: 165px; }
       .product-img img:nth-child(4) { height: 40px; width: 40px; top: 205px; right: 120px; }
