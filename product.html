@@ -9,6 +9,55 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    <nav class="navbar">
+        <div class="nav-logo">
+            <img src="./assets/logo.png" alt="Logo">
+        </div>
+
+        <div class="menu-btn" id="menu-btn">☰</div>
+
+        <div class="links" id="nav-links">
+            <a href="./index.html">Home</a>
+            <a href="#">Product</a>
+            <a href="#">Single Product</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Blog</a>
+        </div>
+    </nav>
+    <div class="main-header">
+        <div class="header">
+            <div class="header-dtl">
+                <div class="circle-box">
+                    <div class="circle same"><img src="./Assets/golden-ball.png" alt=""></div>
+                    <div class="circle"><img src="./Assets/white-ball.png" alt=""></div>
+                </div>
+                <h1><p class="txt">Enhance</p><h3 class="txt bold">your Natural <br class="none"> Radiance</h3></h1>
+                <button>Order Now</button> 
+                <div class="same"><img src="./Assets/white-ball.png" alt=""></div>
+            </div>
+            <div class="header-img">
+                <div class="header-img-circle">
+                    <div class="golden-ring">
+                        <div class="ring-circle">
+                            <div class="circle-set"><img src="./Assets/white-golden-ball.png" alt=""></div>
+                            <div class="circle-set"><img src="./Assets/white-ball.png" alt=""></div>
+                        </div>
+                        <div class="product-img">
+                            <img src="./Assets/white-golden-ball.png" alt="">
+                            <img src="./Assets/p1.png" alt="">
+                            <img src="./Assets/p3.png" alt="">
+                            <img src="./Assets/flower.png" alt="">
+                            <img src="./Assets/p2.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flower-img">
+            <img src="./Assets/flower2.png" alt="">
+        </div>
+    </div>
     <div class="best-selling">
         <div class="sell-1"> 
             <img src="./assets/logo.png" alt="">
@@ -33,6 +82,47 @@
             </div>
         </div>
     </div>
+    <script>
+        const navbar = document.querySelector('.navbar');
+        const menuBtn = document.getElementById('menu-btn');
+        const navLinks = document.getElementById('nav-links');
+
+        function handleScroll() {
+            if (window.scrollY > 10) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        }
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        handleScroll();
+
+        function setMenuOpenState(isOpen) {
+            if (!menuBtn || !navLinks) return;
+            navLinks.classList.toggle('active', isOpen);
+            menuBtn.setAttribute('aria-expanded', String(isOpen));
+            menuBtn.textContent = isOpen ? '✕' : '☰';
+        }
+
+        menuBtn?.setAttribute('aria-controls', 'nav-links');
+        menuBtn?.setAttribute('aria-expanded', 'false');
+
+        menuBtn?.addEventListener('click', function () {
+            const isOpen = !navLinks.classList.contains('active');
+            setMenuOpenState(isOpen);
+        });
+
+        navLinks?.querySelectorAll('a').forEach(function (a) {
+            a.addEventListener('click', function () { setMenuOpenState(false); });
+        });
+
+        window.addEventListener('resize', function () {
+            if (window.innerWidth > 1024) {
+                setMenuOpenState(false);
+            }
+        });
+    </script>
     <div class="leaves"> <img src="./assets/leaves.png" alt=""> </div>
 
     <section class="product-section">
@@ -177,7 +267,7 @@
    
   </section>
 
-    <div class="footer">
+   <div class="footer">
       <div class="foot-1">
           <div class="f1">
               <img src="./assets/logo.png" alt="">
@@ -190,7 +280,6 @@
               <i class="ri-instagram-fill"></i>
           </div>
       </div>
-
       <div class="foot-2">
           <div class="explore">
           <div class="ex-1">
@@ -208,7 +297,7 @@
             <p>somnath,veraval</p>
           </div>
           </div>
-          <div class="news"> 
+        <div class="news"> 
             <div class="n1">
               <h1>Recent News</h1>
             </div>
@@ -232,15 +321,15 @@
                 </div>
               </div>
             </div>
-            </div>
-            </div>
-            <div class="last">
+        </div>
+      </div>
+        <div class="last">
               <p>© 2024 House. All rights reserved</p>
-            </div>
-          </div>
-          <div class="foot-leaves">
-            <img src="./assets/leaves-2.png" alt="">
-          </div>
+        </div>
+        <div class="foot-leaves">
+          <img src="./assets/leaves-2.png" alt="">
+        </div>
+    </div>
 
       
             
