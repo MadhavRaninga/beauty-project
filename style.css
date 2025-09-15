@@ -449,14 +449,11 @@
         flex-direction: column;
         gap: 30px;
     }
-    .product-card{
-        width: 450px;
-    }
+   
     .product-section{
         padding-inline: 8%;
     }
     .sell-1 h1{
-        font-size: 24px;
-        color: red;
+        font-size: 30px;
     }
 }
