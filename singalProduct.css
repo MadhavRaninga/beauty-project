@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+/* hero section  */
+.singalbox {
+    padding-inline: 20px;
+    margin-inline: auto;
+    margin-top: 60px;
+    max-width: 1400px;
+    display: flex;
+    align-items: center;
+    gap: 4.5vw;
+}
+.singalbox-img, .singalbox-dtl {
+    width: 50%;
+}
+.singalbox-img img {
+    object-fit: cover;
+    width: 100%;
+    height: 550px;
+    transform: rotate(180deg);
+}
+.singalbox-dtl {
+    padding-right: 50px;
+}
+.singalbox-dtl h1 {
+    font-size: 49px;
+    font-weight: 500;
+}
+.singalbox-dtl .dtl {
+    font-weight: 500;
+    color: #666666;
+    padding-top: 10px;
+}
+.price-icon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.price {
+    color: #111633;
+}
+.icon-box {
+    display: flex;
+    gap: 12px;
+}
+.icon {
+    border-radius: 50%;
+    border: 1px solid #d9d9d9;
+    height: 45px;
+    width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.icon img {
+    height: 28px;
+    width: 28px;
+    object-fit: cover;
+}
+.singalbox-dtl button {
+    width: 100%;
+    height: 40px;
+    margin-top: 100px;
+    background-color: #e0c1d9;
+    border: none;
+    color: #834256;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+}
+/* <!-- card section --> */
+.card-box {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1400px;
+    padding-inline: 20px;
+    flex-wrap: wrap;
+}
+.card {
+    width: 29%;
+    margin-top: 60px;
+}
+.card-img {
+    position: relative;
+}
+.card-img img {
+    width: 100%;
+}
+.heart-icon {
+    width: 100%;
+    position: absolute;
+    top: 15px;
+    padding-right: 15px;
+    display: flex;
+    justify-content: end;
+}
+.heart-icon img {
+    width: 30px;
+    height: 30px;
+}
+.card-dtl {
+    border-left: 1px solid rgb(197, 183, 183);
+    border-right: 1px solid rgb(197, 183, 183);
+    border-bottom: 4px solid rgb(197, 183, 183);
+    color: #834256;
+    background-color: white;
+    position: relative;
+    padding: 20px;
+    bottom: 20px;
+}
+.dtl-title {
+    font-family: "Marcellus", serif;
+}
+.card-dtl p {
+    font-weight: 500;
+    padding-top: 10px;
+}
+.card-dtl button {
+    margin-top: 15px;
+    height: 35px;
+    width: 100%;
+    background-color: #e0c1d9;
+    border: none;
+    color: #834256;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+}
+/* discount-box */
+.discount-box {
+    width: 100%;
+    height: 110vh;
+    background-image: url(./Assets/discount-bg.jpg);
+    background-size: cover;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    padding-left: 73px;
+    padding-top: 73px;
+    margin-top: 60px;
+    box-shadow: 500px 500px 533px 500px rgba(156, 104, 142, 0.42) inset;
+    -webkit-box-shadow: 500px 500px 533px 500px rgba(156, 104, 142, 0.42) inset;
+    -moz-box-shadow: 500px 500px 533px 500px rgba(156, 104, 142, 0.42) inset;
+}
+.discount-box h1 {
+    font-size: 64px;
+    font-weight: 500;
+}
+.discount-box h2 {
+    font-size: 48px;
+    font-weight: 400;
+}
+.discount-box p {
+    padding-top: 360px;
+}
+.discount-box p a {
+    color: white;
+    font-size: 38px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.discount-box p a i {
+    color: black;
+}
+/* <!-- subscribe form --> */
+.subscribe-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+    max-width: 1400px;
+    margin: auto;
+    gap: 20px;
+}
+.subscribe-text {
+    flex: 1;
+    min-width: 280px;
+}
+.subscribe-text h2 {
+    font-size: 64px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.subscribe-text p {
+    font-size: 20px;
+    color: #3F3F3F;
+    font-weight: 500;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+.subscribe-form {
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+}
+.subscribe-form input {
+    flex: 1;
+    padding: 14px 25px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    background-color: #EFEFEF;
+    font-size: 18px;
+}
+.subscribe-form input::placeholder {
+    color: black;
+}
+.subscribe-form button {
+    padding: 14px 35px;
+    background: #0f172a;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+    transition: background 0.3s;
+}
+.subscribe-form button:hover {
+    background: #1e293b;
+}
+.subscribe-image {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    margin-top: 20px;
+}
+.subscribe-image img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* responsive */
+@media (max-width: 1280px) {
+    .subscribe-text p .none {
+        display: none;
+    }
+}
+@media (max-width: 1024px) {
+    .singalbox-dtl {
+        padding-right: 0px;
+    }
+    .singalbox-dtl h1 {
+        font-size: 40px;
+    }
+    .singalbox-img img {
+        height: 450px;
+    }
+    .subscribe-text h2 {
+        font-size: 45px;
+    }
+    .subscribe-text p {
+        font-size: 16px;
+    }
+}
+@media (max-width : 768px) {
+    .singalbox {
+        flex-direction: column;
+    }
+    .singalbox-dtl, .singalbox-img {
+        width: 100%;
+    }
+    .singalbox-dtl button {
+        margin-top: 30px;
+    }
+    .discount-box {
+        padding-left: 20px;
+    }
+    .discount-box h1 {
+        font-size: 49px;
+    }
+    .discount-box h2 {
+        font-size: 34px;
+    }
+    .subscribe-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .subscribe-text {
+        margin-bottom: 20px;
+        min-width: 100%;
+        width: 100%;
+    }
+    .subscribe-form {
+        margin: 0 auto;
+    }
+    .subscribe-text h2 {
+        font-size: 35px;
+    }
+    .card {
+        margin-top: 30px;
+        width: 48%;
+    }
+    .dtl-title {
+        font-size: 20px;
+    }
+}
+@media (max-width: 480px) {
+    .subscribe-form {
+        max-width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .card-dtl button {
+        font-size: 13px;
+    }
+}
+@media (max-width: 420px) {
+    .singalbox-img img {
+        height: 350px;
+    }
+    .price-icon {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    .subscribe-image {
+        min-width: 100%;
+    }
+    .card {
+        width: 100%;
+    }
+}
