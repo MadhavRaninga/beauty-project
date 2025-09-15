@@ -472,11 +472,12 @@
         }
 
         .product-section {
-            padding-inline: 8%;
+            padding-inline: 10%;
         }
 
         .sell-1 h1 {
-            font-size: 28px;
+            font-size: 32px;
+            margin-top: 15px;
         }
 
         .product-card h3 {
