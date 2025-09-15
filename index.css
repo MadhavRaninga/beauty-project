@@ -1245,3 +1245,242 @@
         gap: 30px;
     }
 }
+
+.about {
+  width: 100%;
+  min-height: 130vh;
+  position: relative;
+  overflow: hidden;
+}
+.aboutUs {
+  width: 100%;
+  min-height: 90vh;
+  background: linear-gradient(90deg, rgba(245, 146, 218, 0.490196) 0%, rgba(188, 137, 175, 0.42) 100%);
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  position: relative;
+  top: 150px;
+}
+.aboutUs img {
+  position: absolute;
+  top: -170px;
+  left: -580px;
+  height: 140%;
+}
+.leafe {
+  position: absolute;
+  right: -130px;
+  top: 0;
+}
+.leafe img {
+  width: 400px;
+  transform: rotate(-70deg);
+}
+#goldBall {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  left: 430px;
+  top: 150px;
+}
+.content {
+  width: 550px;
+  height: 85vh;
+  margin-left: 50px;
+  position: relative;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 4%;
+}
+.content img {
+  width: 130px;
+  height: 110px;
+  position: absolute;
+  left: 18%;
+  top: 22%;
+}
+.content h1 {
+  font-size: 60px;
+  color: #111633;
+  z-index: 1;
+}
+.content p {
+  font-size: 26px;
+  color: #3f3f3f;
+  text-align: center;
+  font-weight: 500;
+  line-height: 130%;
+}
+.content button {
+  padding: 20px 50px;
+  border-radius: 10px;
+  background-color: #111633;
+  color: #e3e3e3;
+  border: none;
+  font-size: 24px;
+  margin-bottom: 90px;
+}
+#whiteGoldball {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: -40px;
+  top: 70%;
+}
+.lady {
+  width: 550px;
+  height: 90vh;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.lady img {
+  width: 100%;
+  height: 90vh;
+  position: absolute;
+  left: 0%;
+  top: 0px;
+}
+/* ================= Responsive ================= */
+
+/* Laptop / Small Desktop (<= 1024px) */
+@media (max-width: 1024px) {
+  .aboutUs {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    top: 100px;
+    padding: 40px;
+    position: relative;
+  }
+
+  /* Facewash / golden-creame image first */
+  .aboutUs > img:first-of-type {
+    order: 1;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: auto;
+  }
+
+  /* Content second */
+  .content {
+    order: 2;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .content h1 {
+    font-size: 48px;
+  }
+  .content p {
+    font-size: 20px;
+  }
+
+  /* Lady image last */
+  .lady {
+    order: 3;
+    position: relative;
+    width: 60%;
+    height: auto;
+  }
+  .lady img {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  /* Optional: hide decorations for clarity */
+  #goldBall,
+  #whiteGoldball,
+  .content img {
+    display: none;
+  }
+}
+
+/* Tablet & below (<= 768px) */
+@media (max-width: 768px) {
+  .aboutUs {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    top: 80px;
+    padding: 20px;
+    position: relative;
+  }
+
+  /* Order control */
+  .aboutUs > img:first-of-type {
+    order: 1; /* facewash/golden-creame img */
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: auto;
+  }
+
+  .content {
+    order: 2;
+    width: 90%;
+    height: auto;
+    margin: 0;
+    text-align: center;
+  }
+  .content h1 {
+    font-size: 36px;
+  }
+  .content p {
+    font-size: 18px;
+  }
+
+  .lady {
+    order: 3;
+    position: relative;
+    width: 70%;
+    height: auto;
+  }
+  .lady img {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  /* Hide or shrink floating balls for clean look */
+  #goldBall,
+  #whiteGoldball,
+  .content img {
+    display: none;
+  }
+}
+
+/* Mobile (<= 480px) */
+@media (max-width: 480px) {
+  .aboutUs {
+    top: 50px;
+    padding: 10px;
+  }
+  .aboutUs > img:first-of-type {
+    width: 90%;
+  }
+  .content h1 {
+    font-size: 28px;
+  }
+  .content p {
+    font-size: 16px;
+    line-height: 140%;
+  }
+  .content button {
+    font-size: 18px;
+    padding: 12px 30px;
+  }
+  .lady {
+    width: 90%;
+    margin-top: 15px;
+  }
+}
