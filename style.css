@@ -448,4 +448,10 @@
         flex-direction: column;
         gap: 30px;
     }
+    .product-card{
+        width: 450px;
+    }
+    .product-section{
+        padding-inline: 8%;
+    }
 }
