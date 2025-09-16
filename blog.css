@@ -284,6 +284,12 @@ background: linear-gradient(293.13deg, rgba(243, 115, 208, 0.490196) 20.06%, #DD
     text-indent: 20px;
     font-size: 23px;
   }
+  .nav-logo {
+    padding-top: 13px;
+  }
+  .nav-logo img{
+    width: 90px;
+  }
 }
 @media (max-width:768px) {
   .text h1{
