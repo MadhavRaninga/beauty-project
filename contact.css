@@ -295,6 +295,9 @@ body {
   .image-section {
     order: -1; /* Show image first on mobile */
   }
+  .contact-section {
+    padding-top: 90px;
+  }
 }
 
 @media (max-width: 768px) {
