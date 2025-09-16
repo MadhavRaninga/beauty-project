@@ -555,7 +555,6 @@
     height: 48px;
     padding-inline: 20px;
     background-color: #1e293b;
-    color: white;
     cursor: pointer;
     border: none;
     border-radius: 7px;
@@ -563,9 +562,14 @@
     margin-top: 45px;
     font-weight: 500;
     transition: .4s;
+    color: white;
 }
 .contain-dtl button:hover {
     background-color: #354153;
+}
+.contain-dtl button a {
+    color: white;
+    text-decoration: none;
 }
 /* responsive */
 @media (max-width: 1440px) {
@@ -1062,6 +1066,25 @@
         gap: 10px;
     }
 }
+
+.loader-overlay{
+    position: fixed;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    z-index: 9999;
+    transition: opacity .4s ease, visibility .4s ease;
+}
+.loader-overlay.hide{ opacity: 0; visibility: hidden; pointer-events: none; }
+.loader-logo{ width: 120px; height: auto; margin-bottom: 16px; }
+.loader-spinner{
+    width: 40px; height: 40px; border: 3px solid #e5e7eb; border-top-color: #111633; border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin{ to{ transform: rotate(360deg); } }
 
 .footer{
     height: auto;

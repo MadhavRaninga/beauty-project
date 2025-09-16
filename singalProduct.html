@@ -19,6 +19,10 @@
 </head>
 
 <body>
+    <div id="site-loader" class="loader-overlay">
+        <img src="./assets/logo.png" alt="Logo" class="loader-logo">
+        <div class="loader-spinner"></div>
+    </div>
     <!-- navbar -->
     <nav>
         <div class="navbar">
@@ -34,7 +38,7 @@
                 <a href="./singalProduct.html">Single Product</a>
                 <a href="#">About Us</a>
                 <a href="#">Contact Us</a>
-                <a href="#">Blog</a>
+                <a href="./blog.html">Blog</a>
             </div>
         </div>
     </nav>
@@ -295,6 +299,11 @@
       if (window.innerWidth > 1024) {
         setMenuOpenState(false);
       }
+    });
+  </script>
+  <script>
+    window.addEventListener('load', function(){
+      setTimeout(function(){ document.getElementById('site-loader')?.classList.add('hide'); }, 800);
     });
   </script>
 </body>

@@ -15,6 +15,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="site-loader" class="loader-overlay">
+        <img src="./assets/logo.png" alt="Logo" class="loader-logo">
+        <div class="loader-spinner"></div>
+    </div>
     <nav>
         <div class="navbar">
             <div class="nav-logo">
@@ -29,7 +33,7 @@
                 <a href="./singalProduct.html">Single Product</a>
                 <a href="#">About Us</a>
                 <a href="#">Contact Us</a>
-                <a href="#">Blog</a>
+                <a href="./blog.html">Blog</a>
             </div>
         </div>
     </nav>
@@ -183,7 +187,7 @@
         <h1>Special Offer!</h1>
         <h2>15% Discount</h2>
         <img src="./Assets/golden-lives2.png" alt="">
-        <p><a href="">Order Now <i class="ri-arrow-right-line"></i></a></p>
+        <p><a href="./product.html">Order Now <i class="ri-arrow-right-line"></i></a></p>
     </div>
 
     <!-- product more dtl -->
@@ -198,7 +202,7 @@
                     <div class="contain-dtl">
                         <h3>Anti-Aging Cream</h3>
                         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less</p>
-                        <button>Read more <i class="ri-arrow-right-line"></i></button>
+                        <button> <a href="./blog.html">Read more</a> <i class="ri-arrow-right-line"></i></button>
                     </div>
                 </div>
             </div>
@@ -328,6 +332,9 @@
         </div>
     </div>
     <script>
+        window.addEventListener('load', function(){
+            setTimeout(function(){ document.getElementById('site-loader')?.classList.add('hide'); }, 800);
+        });
         const navbar = document.querySelector('.navbar');
         const menuBtn = document.getElementById('menu-btn');
         const navLinks = document.getElementById('nav-links');
