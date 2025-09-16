@@ -286,6 +286,7 @@ body {
     flex-direction: column;
     gap: 2.5rem;
     text-align: center;
+    margin-top: 90px;
   }
 
   .contact-info {
@@ -295,15 +296,11 @@ body {
   .image-section {
     order: -1; /* Show image first on mobile */
   }
-  .contact-section {
-    padding-top: 90px;
-  }
 }
 
 @media (max-width: 768px) {
   .contact-section {
     padding: 1.5rem 1rem;
-    min-height: auto; /* Allow natural height on mobile */
   }
 
   .contact-content {
