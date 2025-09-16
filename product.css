@@ -531,13 +531,20 @@
     .menu-btn { display: none; font-size: 30px; cursor: pointer; color: black; z-index: 1000; }
     @media (max-width: 1024px) {
       .menu-btn { display: block; }
-      .navbar{ padding-right: 2vw; }
-      .links { display: none; flex-direction: column; position: absolute; top: 100px; left: 0; width: 100%; background: white; padding: 20px 0; border-top: 1px solid #ccc; text-align: center; gap: 20px; }
+      .navbar{ 
+        padding-right: 2vw;
+        background-color: white;
+        padding-inline: 20px;
+      }
+      .links { display: none; flex-direction: column; position: absolute; top: 90px; left: 0; width: 100%; background: white; padding: 20px 0; border-top: 1px solid #ccc; padding-inline: 28px; gap: 20px; }
       .links.active { display: flex; }
+      .main-header {
+        padding-top: 90px;
+      }
     }
 
     /* Hero header */
-    .main-header { width: 100%; background-color: rgb(181, 39, 39); }
+    .main-header { width: 100%; }
     .header { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 20px; background: linear-gradient(45deg, #E3B7D1, #D4DCF0); }
     .circle-box { display: flex; justify-content: space-between; align-items: center; }
     .same img { height: 60px; width: 60px; object-fit: cover; }

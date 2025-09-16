@@ -485,6 +485,7 @@
     }
     .links {
         display: none;
+        padding-inline: 28px;
     }
     .links.active {
         display: flex;
@@ -495,12 +496,9 @@
         right: 0;
         background: #ffffff;
         padding: 16px 24px;
-        gap: 16px;
+        gap: 20px;
         box-shadow: 0 6px 24px rgba(0,0,0,0.08);
         z-index: 999;
-    }
-    .links.active a {
-        padding: 8px 0;
     }
 }
 @media (max-width : 768px) {
