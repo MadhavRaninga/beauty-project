@@ -1271,6 +1271,7 @@
         .foot-leaves{
           display: none;
         }
+        
 }
 
 @media (max-width:500px) {
@@ -1390,6 +1391,11 @@
     top: 100px;
     padding: 40px;
     position: relative;
+  }
+  .leafe img{
+    width: 250px;
+    right: -50px;
+
   }
 
   /* Facewash / golden-creame image first */

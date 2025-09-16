@@ -37,7 +37,7 @@
                 <a href="./product.html">Product</a>
                 <a href="./singalProduct.html">Single Product</a>
                 <a href="#">About Us</a>
-                <a href="#">Contact Us</a>
+                <a href="./contact.html">Contact Us</a>
                 <a href="./blog.html">Blog</a>
             </div>
         </div>
@@ -304,6 +304,18 @@
   <script>
     window.addEventListener('load', function(){
       setTimeout(function(){ document.getElementById('site-loader')?.classList.add('hide'); }, 800);
+    });
+    // Show loader on link navigation (except hash/new tab)
+    document.querySelectorAll('a[href]').forEach(function(a){
+      a.addEventListener('click', function(e){
+        const href = a.getAttribute('href') || '';
+        if (href.startsWith('#') || href.startsWith('javascript:')) return;
+        if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || a.target === '_blank') return;
+        e.preventDefault();
+        const loader = document.getElementById('site-loader');
+        loader?.classList.remove('hide');
+        setTimeout(function(){ window.location.href = a.href; }, 60);
+      });
     });
   </script>
 </body>
