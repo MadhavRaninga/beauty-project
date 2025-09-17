@@ -1524,3 +1524,150 @@
     margin-top: 15px;
   }
 }
+
+
+
+
+
+
+
+
+/* ======================= */
+/* Container for all products */
+/* ======================= */
+.products {
+  width: 100%;
+  max-width: 1600px;
+  margin: 20px auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 50px;
+  /* background: #000; */
+  
+
+}
+
+/* ======================= */
+/* Single Product Styling */
+/* ======================= */
+.product {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  height: 700px; /* fixed height */
+}
+
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* ======================= */
+/* Image Styling */
+/* ======================= */
+.product-home-img {
+  width: 100%;
+  flex: 1; /* image takes available space */
+  overflow: hidden;
+}
+
+.product-home-img img {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+  object-fit: cover;
+}
+
+/* ======================= */
+/* Details Section */
+/* ======================= */
+.product-home-dtl {
+  padding: 15px;
+  background-color: #fff;
+}
+
+.product-home-dtl h3 {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.product-home-dtl .des {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* limits to 3 lines */
+  -webkit-box-orient: vertical;
+}
+
+/* ======================= */
+/* Price Section */
+/* ======================= */
+.price-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price h2 {
+  font-size: 1.1rem;
+  color: #000;
+}
+
+.rate {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.star {
+  color: #f4c150;
+}
+
+/* ======================= */
+/* Shopping Bag Icon */
+/* ======================= */
+.bag {
+  background-color: #1877f2;
+  color: #fff;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.bag:hover {
+  background-color: #165ec9;
+  transform: scale(1.1);
+}
+
+/* ======================= */
+/* Responsive Design */
+/* ======================= */
+@media (max-width: 992px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .products {
+    grid-template-columns: 1fr;
+  }
+
+  .product {
+    height: auto;
+  }
+
+  .product-home-img {
+    height: 200px;
+  }
+}
