@@ -533,6 +533,10 @@
     align-items: center;
     justify-content: center;
 }
+
+.jar img{
+    width: 450px;
+}
 .contain {
     text-align: center;
 }
