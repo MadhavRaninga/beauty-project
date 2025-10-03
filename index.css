@@ -344,7 +344,7 @@
 .discount-box {
     width: 100%;
     height: 110vh;
-    background-image: url(./Assets/discount-bg.jpg);
+    background-image: url(./assets/discount-bg.jpg);
     background-size: cover;
     object-fit: cover;
     background-repeat: no-repeat;
@@ -386,7 +386,7 @@
 .quality-product-container {
     width: 100%;
     height: 110vh;
-    background-image: url(./Assets/product-bg-img.png);
+    background-image: url(./assets/product-bg-img.png);
     background-size: cover;
     object-fit: cover;
     background-repeat: no-repeat;
